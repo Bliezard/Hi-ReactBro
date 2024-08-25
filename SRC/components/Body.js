@@ -99,9 +99,9 @@ const Body = () => {
 
              const filteredList=ListOfRestaurants.filter((res)=> res.info.avgRating>4.5);
              console.log(filteredList)
-              setListOfRestraunt(filteredList);
+             setFilteredRestaurant(filteredList);
            }}>Top rated Restaurants</button>
-      </div>
+        </div>
 
 
 
