@@ -1,5 +1,7 @@
 import { LOGO_URL } from "../utils/constants";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Header = () => {
 
@@ -7,25 +9,26 @@ const Header = () => {
   console.log("header render again");
   const [btnNameReact, setbtnNameReact] = useState("Login");
 
+  const OnlineStatus = useOnlineStatus();
+
   useEffect(()=>{
     console.log("useEffect called");
   }, );
 
 
     return (
-      <div className="header">
-        <div className="logo-container">
-          <img
-            className="logo"
-            src="https://www.logodesign.net/logo/smocking-burger-with-lettuce-3624ld.png"
-          />
+      <div className="flex">
+        <div className="logo-container ">
+          <img className="w-8" src={LOGO_URL}/>
         </div>
         <div className="nav-items">
-          <ul>
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Contact Us</li>
-            <li>Cart</li>
+          <ul className="flex"> 
+            <li>Online Status : {OnlineStatus ? "✅" : "🔴"}</li>
+            <li><Link to="/" className="header-list">Home</Link></li>
+            <li><Link to="/about" className="header-list">About Us</Link></li>
+            <li><Link to="/contact" className="header-list">Contact Us</Link></li>
+            <li><Link to="/grocery" className="header-list">Grocery</Link></li>
+            <li><Link className="header-list">Cart</Link></li>
             <button 
             className="login-btn" 
             onClick={() => {

@@ -1,0 +1,11 @@
+{
+  "plugins": {
+    "tailwindcss": {}
+    
+  },
+
+  "files.associations": {
+  "*.css": "tailwindcss"
+}
+}
+
