@@ -15,34 +15,34 @@ const Header = () => {
   });
 
   return (
-    <div className="flex">
-      <div className="logo-container ">
+    <div className="flex justify-between bg-pink-100 shadow-lg sm:bg-yellow-50 lg:bg-green-50">
+      <div className="logo-container">
         <img className="w-56" src={LOGO_URL} />
       </div>
-      <div className="nav-items">
-        <ul className="flex">
+      <div className="flex items-center">
+        <ul className="flex p-4 m-4">
           <li>Online Status : {OnlineStatus ? "✅" : "🔴"}</li>
-          <li>
+          <li className="px-4">
             <Link to="/" className="header-list">
               Home
             </Link>
           </li>
-          <li>
+          <li className="px-4">
             <Link to="/about" className="header-list">
               About Us
             </Link>
           </li>
-          <li>
+          <li className="px-4">
             <Link to="/contact" className="header-list">
               Contact Us
             </Link>
           </li>
-          <li>
+          <li className="px-4">
             <Link to="/grocery" className="header-list">
               Grocery
             </Link>
           </li>
-          <li>
+          <li className="px-4">
             <Link className="header-list">Cart</Link>
           </li>
           <button

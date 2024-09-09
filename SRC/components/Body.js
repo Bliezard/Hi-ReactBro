@@ -81,16 +81,19 @@ if(onlineStatus === false) return <h1>looks like you are offline, please check y
     <Shimmer /> 
     ): (
       <div className="body">
-      { /* <div className="search">Search</div> */ }
-         <div className="filter">
-           <div className="search">
-              <input type="text" className="search-box"
-               value={searchText}
-               onChange={ (e) => {
+      
+         <div className="filter flex">
+           <div className="search m-4 p-4">
+              <input type="text" 
+                className="border border-solid border-black"
+                value={searchText}
+                onChange={ (e) => {
                 setSearchText(e.target.value);
                }}
                />
-               <button onClick={()=>{
+               <button 
+               className="px-4 py-2 bg-green-100 m-4 rounded-lg"
+               onClick={()=>{
                 // Update the restro cards and update the UI
                 // search Text
                 console.log(searchText);
@@ -98,19 +101,32 @@ if(onlineStatus === false) return <h1>looks like you are offline, please check y
                   res.info.name.toLowerCase().includes(searchText.toLocaleLowerCase()));
                   setFilteredRestaurant(FilteredRestaurant);
                }}>search</button>
-            </div>
-
-            <button className="filter-btn" onClick={()=>{
+            </div >
+               <div className="search m-4 p-4 flex items-center">
+               <button 
+                  className="px-4 py-2 bg-gray-100 rounded-lg" 
+                  onClick={()=>{
+                    const filteredList=ListOfRestaurants.filter(
+                      (res)=> res.info.avgRating>4.5
+                    );
+                // console.log(filteredList)
+                    setFilteredRestaurant(filteredList);
+                  }}
+                  >
+                      Top rated Restaurants
+                    </button>
+               </div>
+            {/* <button className="px-4 py-2 bg-gray-100" onClick={()=>{
 
              const filteredList=ListOfRestaurants.filter((res)=> res.info.avgRating>4.5);
              console.log(filteredList)
              setFilteredRestaurant(filteredList);
-           }}>Top rated Restaurants</button>
+           }}>Top rated Restaurants</button> */}
         </div>
 
 
 
-        <div className="res-container">
+        <div className="flex flex-wrap">
          {/*  <RestaurantCard resData={resList[0]} />
           <RestaurantCard resData={resList[1]} />
           <RestaurantCard resData={resList[2]} />
