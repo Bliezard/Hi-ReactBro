@@ -16,7 +16,9 @@ const Body = () => {
 
     const [searchText, setSearchText] = useState("");
 
-    console.log("body render again");
+    
+
+    console.log("body render again", ListOfRestaurants);
 
     useEffect(()=>{
       fetchData();
@@ -139,15 +141,17 @@ if(onlineStatus === false) return <h1>looks like you are offline, please check y
           <RestaurantCard resData={resList[9]} /> */}
   
           { filteredRestaurant.map((restaurant) => (
-         <Link className="RestaurantsCardLink"
+         <Link 
+         className="RestaurantsCardLink"
          key={restaurant.info.id} 
-         to={"/restaurants/" + restaurant.info.id}>
-          <RestaurantCard  resData={restaurant}/> </Link> 
-          ))}
-
-
+         to={"/restaurants/" + restaurant.info.id}
+         >
           
-        </div>
+          <RestaurantCard  resData={restaurant} />
+        
+         </Link> 
+          ))}
+      </div>
       </div>
     );
   };
