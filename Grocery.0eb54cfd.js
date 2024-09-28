@@ -1,0 +1,2 @@
+var e=("undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:{}).parcelRequire932b;(0,e.register)("jzDmt",function(n,o){Object.defineProperty(n.exports,"__esModule",{value:!0,configurable:!0}),Object.defineProperty(n.exports,"default",{get:function(){return r},set:void 0,enumerable:!0,configurable:!0});var i=e("5aRSq"),r=()=>(0,i.jsxs)("h1",{children:["","Our Online Grocery Store, & we have lot of child components inside this web page!!!"]})});
+//# sourceMappingURL=Grocery.0eb54cfd.js.map

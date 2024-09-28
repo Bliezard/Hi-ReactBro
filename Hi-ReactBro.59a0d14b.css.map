@@ -1,0 +1,1 @@
+{"mappings":"ACAA,oBAIA","sources":["Hi-ReactBro.59a0d14b.css","index.css"],"sourcesContent":["#root {\n  color: #7fffd4;\n}\n\n#heading {\n  color: #00f;\n}\n/*# sourceMappingURL=Hi-ReactBro.59a0d14b.css.map */\n","#root{\r\n   color: aquamarine; \r\n}\r\n\r\n#heading\r\n{\r\n    color:blue;\r\n}"],"names":[],"version":3,"file":"Hi-ReactBro.59a0d14b.css.map"}
