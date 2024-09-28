@@ -20,3 +20,22 @@ To use these properties, you'll do the following:
 3. When Items Are Dynamic: If the number of items is dynamic (e.g., based on user input), a flex container can accommodate this complexity gracefully.
 
 
+# Redux ToolKit
+
+- install @reduxjs/toolkit and react-redux
+ => 1st package -> npm install @reduxjs/toolkit 
+ => 2nd package -> npm i react-redux
+- Build our store
+- connect our store to our app
+- slice(cartSlice)
+- dispatch (action)
+- Selector
+
+# Type of actions inside a cart
+- Add an item in cart 
+- Remove a item in cart 
+- clear the cart
+
+# Actions : Are kind of API's to communicate with redux store
+
+
